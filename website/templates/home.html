@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <!--
+
+    <h1>Notes</h1>
+    <ul class="list-group">
+        {% for note in user.notes %}
+            <li class="list-group-item">{{ note.data }}
+                <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </li>
+        {% endfor %}
+    </ul>
+    <br/>
+    <form method="post">
+        <textarea class="form-control" name="note" id="note" placeholder="Enter your post here"></textarea>
+        <br/>
+        <button type="submit" class="btn btn-primary">Add Note</button>
+    </form>
+
+    -->
+
+    <h1>Process Files</h1>
+    <br/>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+
+{% endblock %}
